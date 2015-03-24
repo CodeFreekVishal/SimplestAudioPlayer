@@ -1,0 +1,11 @@
+package com.example.myaudioplayer;
+
+import android.app.Application;
+import android.media.MediaPlayer;
+
+
+
+public class GlobalMedia extends Application{
+	MediaPlayer mp;
+	
+}
