@@ -1,0 +1,26 @@
+package com.example.myaudioplayer;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+
+public class PauseMedia extends Service{
+
+	GlobalMedia gm;
+	
+	@Override
+	public int onStartCommand(Intent ii, int flag, int id){
+		gm = (GlobalMedia) getApplicationContext();
+		gm.mp.pause();
+		
+		return Service.START_NOT_STICKY;
+	}
+	
+	@Override
+	public IBinder onBind(Intent intent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}
